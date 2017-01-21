@@ -1,0 +1,312 @@
+<?php
+	include("scripts/datedifference.php");
+	require("scripts/connect.php");
+	function Truncate($text) {
+        $chars = 85;
+
+        $text = $text." ";
+        $text = substr($text,0,$chars);
+        $text = substr($text,0,strrpos($text,' '));
+        $text = $text."...";
+
+        return $text;
+    }
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-style-type" content="text/css" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>INVOTICUS | Ask, Decide, Repeat!</title>
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link type="text/css" rel="stylesheet" href="./style/reset.css" />
+	<link type="text/css" rel="stylesheet" href="./style/base.css" />
+    <link type="text/css" rel="stylesheet" href="./style/colorbox/colorbox.css" />
+</head>
+<body>
+		<div class="header">
+		<div><img src="images/hdr-logo.png" alt="Invoticus" /></div>
+		<?php if ($LoggedIn == 0)
+		{?>
+		<ul class="middle">
+			<li><a href="signup/">Signup!</a></li>
+			<li>|</li>
+			<li><a href="login/index.php">Login</a></li>
+			<li>|</li>
+			<li><a href="about/index.php">About</a></li>
+		</ul>
+		<?php } else {?>
+		<ul class="middle">
+			<li><a href="ask/">Create!</a></li>
+			<li>|</li>
+			<li><a href="#">Settings</a></li>
+			<li>|</li>
+			<li><a href="#">Profile</a></li>
+		</ul>
+		<?php }?>
+	</div><!-- end header -->
+
+
+	<div class="nav">
+    	<div>
+            <ul>
+                <li><a href="#">Everything</a></li>
+                <li><a href="#">Lifestyle</a></li>
+                <li><a href="#">Science</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Tech</a></li>
+                <li><a href="#">Gaming</a></li>
+                <li><a href="#">Music</a></li>
+				<li><a href="#">Sports</a></li>
+                <li><a href="#">Other</a></li>
+
+            </ul>
+        <?php if ($LoggedIn == 1)
+		{?>
+            <p><i>Logged in</i> as <b><?php echo $UserInfo['dbUsrName'];?></b> [<a href="../scripts/logout.php">Log Out</a>]</p>
+            <?php }?>
+            <div class="clear"></div>
+        </div>
+	</div><!-- end nav -->
+
+<?php if ($LoggedIn == 0)
+	{?>
+    <div class="featured">
+			<table>
+			<h1>Featured decisions!</h1>
+    			<table cellspacing="10px">
+			<tr> 
+				<td width="60px"><div class="image"> 
+				<a href="choicevote.php?v=0&p=76&u=15"> 
+				<img src="..\dog\testimage\cod.png" width="60" height="45" /> </a> 
+				</td> 
+				</div> 
+				<td width="60px"><div class="image">			
+				<a href="choicevote.php?v=1&p=76&u=15"> 
+				<img src="..\dog\testimage\halo.jpg" width="60" height="45" /> </a><br /> 
+				</td> 
+					<td width="60px"><div class="image"> 
+				<a href="choicevote.php?v=0&p=76&u=15"> 
+				<img src="..\dog\testimage\falcons.jpg" width="60" height="45" /> </a> 
+				</td> 
+				</div> 
+				<td width="60px"><div class="image">			
+				<a href="choicevote.php?v=1&p=76&u=15"> 
+				<img src="..\dog\testimage\patriots.jpg" width="60" height="45" /> </a><br /> 
+				</td> 
+				</div> 
+				<td width="60px"><div class="image"> 
+				<a href="choicevote.php?v=0&p=76&u=15"> 
+				<img src="..\dog\testimage\htcevo.jpg" width="60" height="45" /> </a> 
+				</td> 
+				</div> 
+				<td width="60px"><div class="image">			
+				<a href="choicevote.php?v=1&p=76&u=15"> 
+				<img src="..\dog\testimage\iphone.jpg" width="60" height="45" /> </a><br /> 
+				</td> 
+				</div> 
+				<td width="60px"><div class="image"> 
+				<a href="choicevote.php?v=0&p=76&u=15"> 
+				<img src="..\dog\testimage\chicfila.jpg" width="60" height="45" /> </a> 
+				</td> 
+				</div> 
+				<td width="60px"><div class="image">			
+				<a href="choicevote.php?v=1&p=76&u=15"> 
+				<img src="..\dog\testimage\mcdonalds.jpg" width="60" height="45" /> </a><br /> 
+				</td> 
+				</div>
+				<td width="60px"><div class="image"> 
+				<a href="choicevote.php?v=0&p=76&u=15"> 
+				<img src="..\dog\testimage\chicfila.jpg" width="60" height="45" /> </a> 
+				</td> 
+				</div> 
+				<td width="60px"><div class="image">			
+				<a href="choicevote.php?v=1&p=76&u=15"> 
+				<img src="..\dog\testimage\mcdonalds.jpg" width="60" height="45" /> </a><br /> 
+				</td> 
+				</div>  
+			</tr>
+			</table>
+			<table> 
+			<tr> 
+				<td width="120px">
+				<h2>Which is better? Halo Reach or COD: Black ops?<br>by <a href="#">Nerdelite</a><br>1,021 votes</h2></td> 
+			<td width="120px">
+				<h2>Which team is going to win the superbowl? Falcons or Patriots?<br>by <a href="#">invotiking</a><br>1,021 votes</h2></td>
+			<td width="120px">
+				<h2>Which phone should I purchase? HTC Evo or Apple Iphone?<br>by <a href="#">blackairplane</a><br>1,021 votes</h2></td>
+			<td width="120px">
+				<h2>Where should I go out to eat? Chicfila or Mcdonalds?<br>by <a href="#">musicalgenius</a><br>1,021 votes</h2></td>
+			<td width="120px">
+				<h2>Where should I go out to eat? Chicfila or Mcdonalds?<br>by <a href="#">musicalgenius</a><br>1,021 votes</h2></td>
+			</tr>
+			</table>
+    	<a class="close">&nbsp;</a>
+    </div>
+
+<?php }
+		  		$PostSort = $_REQUEST['sort'];
+		  		if ($PostSort == 'recent')
+		  			{ 
+		  			$SortTitle = "Blender! | Sorting by the most recent";
+		  			$PostSQL = "SELECT * FROM Posts WHERE dbExpDate > NOW() ORDER BY dbAddDate DESC LIMIT 0, 15";
+		  			}
+		  		elseif ($PostSort == 'comments')
+		  			{
+		  			$SortTitle = "Blender! | Sorting by the most comments";
+		  			$PostSQL = "SELECT * FROM Posts p LEFT OUTER JOIN 
+					(SELECT c.dbIDCnt, c.dbIDGroup, COUNT(*) AS comment_count 
+					FROM Comments c WHERE c.dbIDGroup = 1 GROUP BY c.dbIDCnt ) agg
+					ON p.dbPostCnt = agg.dbIDCnt 
+					WHERE p.dbExpDate > Now()
+					ORDER BY agg.comment_count DESC LIMIT 0, 15";
+  					}
+		  		elseif ($PostSort == 'expiring')
+		  			{
+		  			$SortTitle = "Blender! | Sorting by expiring soonest";
+		  			$PostSQL = "SELECT * FROM Posts LEFT JOIN Users ON Posts.dbUsrCnt = Users.dbUsrCnt WHERE Posts.dbExpDate > NOW() ORDER BY Posts.dbExpDate ASC LIMIT 0, 15";
+  					}
+				else
+		  			{
+		  			$SortTitle = "Blender! | Sorting by the most votes";
+					$PostSQL = "SELECT p.*, COUNT(v.dbPostCnt) AS numvotes 
+					FROM Posts AS p 
+					LEFT JOIN
+					Votes AS v
+					ON p.dbPostCnt= v.dbPostCnt
+					INNER JOIN
+						(
+						SELECT
+						p2.dbPostCnt AS dbPostCnt, COUNT(v2.dbPostCnt) AS numvotes
+						FROM Posts AS p2
+						LEFT JOIN
+						Votes AS v2
+						ON p2.dbPostCnt=v2.dbPostCnt
+						GROUP BY p2.dbPostCnt
+						) AS x
+					ON
+					x.dbPostCnt=p.dbPostCnt
+					WHERE p.dbExpDate > Now()
+					GROUP BY p.dbPostCnt
+					ORDER BY x.numvotes DESC LIMIT 0, 15";
+  					}
+		  		$PostResult = mysql_query ($PostSQL, $dbconnect);?>
+		  		
+	<div class="content">
+    	<div class="top-left"><?php echo $SortTitle;?></div>
+		<div class="top-right">
+		  	<ul>
+				<li><a href="home.php?sort=votes">Votes</a></li>
+				<li><a href="home.php?sort=comments">Comments</a></li>
+				<li><a href="home.php?sort=expiring">Expiring</a></li>
+				<li><a href="home.php?sort=recent">Recent</a></li>
+           	</ul>
+		  </div>
+
+		  	
+		  	<?php	while ($PostRow = mysql_fetch_array ($PostResult))
+		  			{
+			  			//Author information
+						$AuthorCnt = $PostRow['dbUsrCnt'];
+		  				$AuthorSQL = "SELECT * FROM `Users` WHERE `dbUsrCnt` = '$AuthorCnt'";
+						$AuthorResults = mysql_query($AuthorSQL, $dbconnect);
+						$AuthorInformation = mysql_fetch_array($AuthorResults);
+						$AuthorUsername = $AuthorInformation['dbUsrName'];
+						
+						//Post information
+		  				$dbPostCnt = $PostRow['dbPostCnt'];
+		  				$PostDesc = $PostRow['dbPostDesc'];
+		  				$PostDescription = Truncate($PostDesc);
+		  				$PostTitle = $PostRow['dbPostTitle'];
+		  				$Expiration = $PostRow['dbExpDate'];	
+						
+						//Vote information
+						$VotesSQL = "SELECT * FROM Votes WHERE dbPostCnt = '$dbPostCnt'";
+						$VotesResult = mysql_query ($VotesSQL,$dbconnect); 		
+						$TotalVotes = mysql_num_rows ($VotesResult);
+						
+						//Category information
+						$dbCatCnt = $PostRow['dbCatCnt'];
+		  				$CategorySQL = "SELECT * FROM `Categories` WHERE `dbCatCnt` = '$dbCatCnt'";
+		  				$CategoryResult = mysql_query ($CategorySQL, $dbconnect);
+		  				$CategoryRow = mysql_fetch_array($CategoryResult);
+		  				$PostCategory = strtoupper($CategoryRow['dbCatName']);
+		  				$CategoryColor = $CategoryRow['dbCatColor'];
+
+						//Comment information
+						$CommentSQL = "SELECT * FROM Comments WHERE `dbIDGroup` = 1 AND `dbIDCnt` = '$dbPostCnt'";
+						$CommentResults = mysql_query($CommentSQL, $dbconnect);
+						$CommentNumber = mysql_num_rows($CommentResults);
+		  				$RemainingTime = GetTimeDiff($Expiration);
+
+
+				?>
+
+		<div class="listing">
+        	<div class="circle" style="background-color:#<?php echo $CategoryColor;?>">
+        	<?php echo $TotalVotes;?></div>
+      <div class="text">
+                <h1><span><?php echo $PostCategory;?></span> <a href="vote/?post=<?php echo $PostRow['dbPostCnt'];?>"> 
+                "<?php echo $PostTitle;?>"</a>  </h1>
+                <p><?php echo $PostDescription;?></p>
+                <p class="bottom"><span>promoted decision</span> by <a href="#"><?php echo $AuthorUsername;?></a> 
+                [expires in<span class="blue"><?php echo $RemainingTime;?></span>]</p>
+            </div>
+            <div class="bubble">
+            	<span><?php echo $CommentNumber;?></span>
+                <img src="images/dog-01.jpg" />
+            </div>
+            <div class="clear"></div>
+        </div><!-- end listing -->
+   <?php }?>
+
+	</div><!-- end wrapper -->
+	<div class="footer">
+		<ul class="left">
+			<li><a href="#">INVOTICUS!</a></li>
+			<li>|</li>
+			<li><a href="#">Copyright 2010</a></li>
+		</ul>
+		<ul class="right">
+			<li><a href="about/">About</a></li>
+			<li><a href="#">Blog</a></li>
+			<li><a href="#">Advertising</a></li>
+			<li><a href="#">Help</a></li>
+			<li><a href="#">Terms</a></li>
+			<li><a href="#">Privacy</a></li>
+		</ul>
+		<div class="clear"></div>
+	</div><!-- end footer -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/jquery.base.js"></script>
+	<script type="text/javascript" src="./js/jquery.colorbox-min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){ base(); });
+	</script>
+<script type="text/javascript">
+var uservoiceOptions = {
+  /* required */
+  key: 'choicr',
+  host: 'choicr.uservoice.com', 
+  forum: '92439',
+  showTab: true,  
+  /* optional */
+  alignment: 'left',
+  background_color:'#f00', 
+  text_color: 'white',
+  hover_color: '#06C',
+  lang: 'en'
+};
+
+function _loadUserVoice() {
+  var s = document.createElement('script');
+  s.setAttribute('type', 'text/javascript');
+  s.setAttribute('src', ("https:" == document.location.protocol ? "https://" : "http://") + "cdn.uservoice.com/javascripts/widgets/tab.js");
+  document.getElementsByTagName('head')[0].appendChild(s);
+}
+_loadSuper = window.onload;
+window.onload = (typeof window.onload != 'function') ? _loadUserVoice : function() { _loadSuper(); _loadUserVoice(); };
+</script>
+</body>
+</html>

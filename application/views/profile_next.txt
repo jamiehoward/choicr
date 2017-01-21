@@ -1,0 +1,74 @@
+/* REMEMBER TO ADD THIS LATER
+			
+			include("../scripts/datedifference.php");
+			require("../scripts/connect.php");
+			function Truncate($text, $num)
+			{
+			if ($num == NULL) { $chars = 50; }
+			else { $chars = $num; }	
+			if (strlen($text) > $chars)
+				{
+				$textending = "...";
+				}
+			$text = $text." ";
+			$text = substr($text,0,$chars);
+			$text = substr($text,0,strrpos($text,' '));
+			$text = $text . $textending;
+			return $text;
+			}
+			function Send_author_expired_email($emailaddress, $DecTitle)
+				{
+					$subject = "Choicr.com | Your decision expired!";
+					$body = "<img src='https://s3.amazonaws.com/uploads.uservoice.com/logo/subdomain/78177/original/logo.jpg' />
+					<br />
+					<h1>Greetings!</h1>
+					Your decision \"" . $DecTitle . "\" has expired. <br />
+					Log in and go to your profile to see the decision results and post a follow-up message to your voters! <a href='http://www.choicr.com/'>Log in at Choicr</a>
+					<hr />
+					<b>Choicr: Ask, Decide, Repeat!</b>";
+					$headers = "From: do-not-reply@choicr.com\r\n" . "X-Mailer: php";
+					$headers .= 'MIME-Version: 1.0' . "\r\n";
+					$headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+					mail($emailaddress,$subject,$body,$headers);
+				}*/
+				
+// Mass database change scripts
+			$ExpSQL = "SELECT * FROM `Posts` WHERE dbExpDate < NOW() AND dbPostCnt NOT IN (SELECT dbActivityID FROM Activity WHERE dbActivityType = 6)";
+			$ExpResults = mysql_query($ExpSQL,$dbconnect);
+			while ($ExpInfo = mysql_fetch_array($ExpResults))
+				{
+				$ExpUser = $ExpInfo['dbUsrCnt'];
+				$ExpPost = $ExpInfo['dbPostCnt'];
+				$ExpDate = $ExpInfo['dbExpDate'];
+				$ActivitySQL = "INSERT INTO `Activity` (`dbActivityCnt`, `dbUsrCnt`, `dbActivityType`, `dbActivityID`, `dbActivityDetail`, `dbActivityDate`) VALUES ('', '$ExpUser', 6, '$ExpPost', NULL, '$ExpDate')";
+				mysql_query($ActivitySQL,$dbconnect);
+				$UserEmailSQL = "SELECT dbUsrEmail FROM Users WHERE dbUsrCnt = '$ExpUser' LIMIT 1";
+					$UserEmailResults = mysql_query($UserEmailSQL, $dbconnect);
+					$UserEmail = mysql_fetch_array($UserEmailResults);
+				Send_author_expired_email($UserEmail['dbUsrEmail'], $ExpInfo['dbPostTitle']);
+				}
+			$ClrEmptySQL = "SELECT * FROM Activity WHERE dbActivityType = 1 AND dbActivityID NOT IN (SELECT dbPostCnt FROM Posts)";
+			$ClrEmptyResults = mysql_query($ClrEmptySQL,$dbconnect);
+			while ($ClrEmptyInfo= mysql_fetch_array($ClrEmptyResults))
+				{
+				$ClrEmptyCnt = $ClrEmptyInfo['dbActivityCnt'];
+				$ClrEmptyRowsSQL = "DELETE FROM `Activity` WHERE dbActivityCnt = '$ClrEmptyCnt'";
+				mysql_query($ClrEmptyRowsSQL,$dbconnect);
+				}
+			// End mass database change scripts
+			
+			
+			
+			// Drop-downs
+			if ($_REQUEST['error'] != NULL)
+				{
+				include("errors.php");
+				}
+			elseif ($_REQUEST['note'] != NULL || $Note != NULL && $PostAuthor == 1)
+				{
+				include("notifications.php");
+				}
+			elseif ($PostAuthor == 1)
+				{
+				include("followup.php");
+				}

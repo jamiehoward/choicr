@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DOGVOTICUS!</title>
+    <link type="text/css" rel="stylesheet" href="../style/reset.css" />
+    <link type="text/css" rel="stylesheet" href="../style/popup.css" />
+</head>
+<body>
+	<div class="content">  	
+            <h1>Feedback</h1>
+            <h2>Have something you wanna see on the site? Notice a bug? Wanna give us a shout out? You can do all that <b>here!</b></h2>
+            <form style="width:400px; margin:0px auto; ">
+                <table>
+                    <tr>
+                        <td>
+                            <select class="select"> 
+                                <option value="Select Type">Select Type</option> 
+                                <option value="Type 1">Type 1</option> 
+                                <option value="Type 2">Type 2</option> 
+                                <option value="Type 3">Type 3</option> 
+                            </select> 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><textarea class="textarea" placeholder="Give us your feedback!"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="submit" style="text-align:center; padding-left:0px;"><input type="submit" class="submit" value="" /></td>
+                    </tr>
+                </table>
+            </form>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.base.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){ base(); });
+	</script>
+</body>
+</html>

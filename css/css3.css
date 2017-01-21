@@ -1,0 +1,29 @@
+ul.list1 li img, div.live div.action a.button{ border-radius: 5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
+div.user{border-radius: 5px 5px 1px 1px; -webkit-border-radius: 5px 5px 1px 1px; -moz-border-radius: 5px 5px 1px 1px;}
+div.box1{-moz-box-shadow: 0px 1px 1px #888; -webkit-box-shadow: 0px 1px 1px #888; box-shadow: 0px 1px 1px  #888;}
+div.user{-moz-box-shadow: 0px 1px 1px #618fbc; -webkit-box-shadow: 0px 1px 1px #618fbc; box-shadow: 0px 1px 1px  #618fbc;}
+div.user a img{-moz-box-shadow: 0px 1px 1px #76aad3; -webkit-box-shadow: 0px 1px 1px #76aad3; box-shadow: 0px 1px 1px  #76aad3; border-radius: 3px; -webkit-border-radius:3px; -moz-border-radius:3px; }
+ul.list1 li{-moz-box-shadow: 0px 1px 1px #b4b8bb; -webkit-box-shadow: 0px 1px 1px #b4b8bb; box-shadow: 0px 1px 1px  #b4b8bb;  border-radius: 5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
+ul.list1 li img{  border-radius: 5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
+a.button1 {border-radius: 5px; -webkit-border-radius:5px; -moz-border-radius:5px;  box-shadow: 0px 1px 1px  #fdfdfd;}
+a.button1.active{text-shadow:1px 1px 1px #559129;}
+div.comments div.comment-form, a.button2{ border-radius: 5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
+div.comments ul li span.avatar{ border-radius: 3px; -webkit-border-radius:3px; -moz-border-radius:3px;}
+div.comments ul li ul li img{border-radius: 2px; -webkit-border-radius:2px; -moz-border-radius:2px;}
+div.creator div.image{border-radius:0px 0px 5px 5px; -webkit-border-radius:0px 0px 5px 5px; -moz-border-radius:0px 0px 5px 5px; -moz-box-shadow: 0px 1px 1px #dededf; -webkit-box-shadow: 0px 1px 1px #dededf; box-shadow: 0px 1px 1px  #dededf;}
+div#content div.main-profile a.follow, div.creator div.details a.follow, div.comments ul li ul li  div.entry span.textarea, div.comments ul li ul li  div.entry span.textarea span.inner{ border-radius: 5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
+a.follow.active{text-decoration:none; background:url(http://www.choicr.com/tagteam/images/buton1.png) left bottom repeat-x; border:1px solid #37913a; color:#fff;}
+a.previous-btn{border-radius:0px 15px 15px 0px; -webkit-border-radius:0px 15px 15px 0px; -moz-border-radius:0px 15px 15px 0px; text-shadow:1px 1px 1px #ecefef;}
+a.next-btn{border-radius:15px 0px 0px 15px; -webkit-border-radius:15px 0px 0px 15px; -moz-border-radius:15px 0px 0px 15px; text-shadow:1px 1px 1px #ecefef;}
+ul.list3 li{border-radius: 5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
+ul.list3 li div.image{ border-radius: 3px; -webkit-border-radius:3px; -moz-border-radius:3px;}
+ul.list3 li div.image img{border-radius: 3px; -webkit-border-radius:3px; -moz-border-radius:3px;}
+a.button3{text-shadow:1px 1px 1px #fff; border-radius: 5px; -webkit-border-radius:5px; -moz-border-radius:5px;}
+a.button3:hover, ul.list3 li:hover a.button3, ul.list3 li.active a.button3{ text-shadow:none;}
+div.comments div.comment-form textarea.textarea {border-radius:5px 5px 0px 0px; -webkit-border-radius:5px 5px 0px 0px; -moz-border-radius:5px 5px 0px 0px; }
+
+div.user  div.child{border-radius: 5px 0px 5px 5px; -webkit-border-radius: 5px 0px 5px 5px; -moz-border-radius: 5px 0px 5px 5px;}
+div.user  div.child ul li a{ text-shadow:-1px 1px 1px #578ec0;}
+div.sign-up-form h2{text-shadow:1px 1px 1px #17191a;}
+div.error { position:relative; bottom:25px; font-size:18px; color:green; }
+​

@@ -1,0 +1,44 @@
+/**
+ * Styles for New Create Profile Page
+ */
+ 
+.create-profile  { margin-top: -11px; padding-left: 33px; position: relative; width: 430px; }
+.create-profile h1.create-profile-header{ color:#757070; font-size:24px; font-weight:normal; margin-bottom:10px; }
+.create-profile p{ color:#757070; font-size:14px; line-height:17px; margin-bottom:19px;}
+
+.stylish-form ul li{ margin-bottom:19px; position:relative; }
+.stylish-form ul li textarea.textarea{ position:relative; color: #757070; font-family:Arial, Helvetica, sans-serif; width:345px; padding:16px 10px 16px 22px; float:left; background:url(../images/textarea3.gif) left top no-repeat; height:85px; color:#757070; font-size:14px; line-height:16px; border:0px; font-style:italic; resize:none; }
+.stylish-form ul li textarea.textarea.active{background:url(../images/textarea3.gif) left bottom no-repeat;}
+
+.stylish-form ul li select.select-box{ height:45px; width:422px; }
+
+.stylish-form ul li span.count{ display:block; width:43px; position:relative; border:1px solid #e0dbdb; border-radius:0px 5px 5px 0px; -moz-border-radius:0px 5px 5px 0px; -webkit-border-radius:0px 5px 5px 0px; background:url(../images/count-bg.gif) left top repeat-x; font-size:14px; text-align:center; line-height:43px; float:left; color:#a3c821;  }
+
+.stylish-form ul li.textarea span.count{ background:url(../images/textarea-count.gif) left top repeat-x; height:115px; font-style:italic; }
+
+.stylish-form ul li span.count img{ vertical-align:middle;}
+.stylish-form ul li input.textbox{  font-family:Arial, Helvetica, sans-serif; position:relative; width:345px; padding:13px 10px 13px 22px; float:left; background:url(../images/textbox3.gif) left top no-repeat; color:#757070; font-size:14px; line-height:19px; height:19px; border:0px; font-style:italic; }
+
+.stylish-form ul li input.textbox.active{ background:url(../images/textbox3.gif) left bottom no-repeat;  }
+.stylish-form .prev-btn{ height:23px; line-height:23px; border:1px solid #aeafad; background:url(../images/prev-btn2.gif) left top repeat-x; color:#777; font-size:14px; text-decoration:none; text-align:center; width:83px; display:block; float:left; font-style:italic; }
+.stylish-form .prev-btn:hover{ text-decoration:none;}
+
+.stylish-form ul li.file span{ margin-bottom:5px;}
+.stylish-form ul li span.file{ background:url(../images/file-upload-input.gif) left top no-repeat; display:block; height:45px; width:377px; float:left; font-style:italic; color:#757070; font-size:14px; }
+.stylish-form ul li.success span.file { line-height:42px; color:#757070; font-size:14px; padding-left:22px; width:355px; font-family: Arial,Helvetica,sans-serif; }
+.stylish-form ul li.file span.file-btn{ background:url(../images/flie-btn.gif) left top no-repeat; display:block; height:45px; width:45px; float:left; }
+.stylish-form ul li.success span.file-btn{ background:url(../images/flie-success-btn.gif) left top no-repeat; display:block; height:45px; width:45px; float:left; }
+.stylish-form ul li span.upload{ background:url(../images/file-upload.gif) left top no-repeat; display:block; height:45px; width:422px; margin-bottom:5px; }
+.stylish-form ul li span span.progress-bar{ background:url(../images/file-upload.gif) left -45px no-repeat; display:block; height:45px; float:left; z-index:1000; }
+.stylish-form ul li span span.progress-bar span.inner{ background:url(../images/file-upload.gif) right -45px no-repeat; display:block; height:45px; width:100%; float:right; }
+.stylish-form ul li span.watermark { z-index:1000; color:#757070 !important; font-style:italic; }
+
+.stylish-form ul .img{ height:45px; width:45px; position:relative;}
+.stylish-form ul .img img{ position:relative; border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; }
+.stylish-form ul .img a.avatar-hover{ background:url(../images/avatar3-hover.png) left top no-repeat; height:45px; width:45px; text-decoration:none; display:none; left:0px; top:0px; position:absolute;}
+.stylish-form ul .img:hover a.avatar-hover{ display:block;}
+ 
+.watermark_container { float:left; }
+.tcAlert, .tcWarn { color:red !important; }
+.browse { background:url(../images/textbox3.gif) left top no-repeat; color:#757070; font-size:14px; line-height:19px; height:43px; float:left; border:0; display:block !important; padding-left:22px; }
+.stylish-form .next-btn{ height:23px; line-height:23px; border:1px solid #37913a; background:url(../images/next-btn2.gif) left top repeat-x; color:#fff; font-size:14px; text-decoration:none; text-align:center; width:83px; display:block; float:right; position:relative !important; top:0px !important; text-shadow:none !important; border-radius:0px 0px 0px 0px !important; -moz-border-radius:0px 0px 0px 0px !important; -webkit-border-radius:0px 0px 0px 0px !important; padding:0px !important; font-style:italic; margin-right:10px;  }

@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Create | Choicr</title>
+<!-- META TAGS -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Script-Type" content="text/html; charset=utf-8" />
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+<link rel="stylesheet" href="css/browser.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/fonts.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/stylish-select.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="css/css3.css" type="text/css" media="screen" />
+</head>
+<body>
+<!-- Container -->
+<div id="container">
+  <div id="left-pannel">
+    <div class="top-strip"></div>
+    <div id="header" class="clearfix">
+      <div class="user css3"> <a href="#" class="css3"> <img src="images/user.jpg" alt="user" class="css3" /> </a>
+        <div class="child css3">
+          <ul>
+            <li><a href="#">Text Goes Here</a></li>
+            <li><a href="#">Text Goes Here</a></li>
+            <li><a href="#">Text Goes Here</a></li>
+            <li><a href="#">Text Goes Here</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="logo"><a href="#">choir</a></div>
+      <div id="menu">
+        <ul class="clearfix">
+          <li><a href="#" class="feed">Feed</a></li>
+          <li><a href="#" class="dashboard">Dashboard</a></li>
+          <li><a href="#" class="create">Create</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="content" class="clearfix">
+      <div class="create-profile">
+        <h2>Create</h2>
+        <p>Create a decision! A few examples are <em>'Where should I go on my date?'</em>,<br />
+          <em>'Which tie should I wear to the interview?'</em>, or <em>'Which song <br />
+          should my band open up with at our next show?'</em>.The possibilities are<br /> endless!</p>
+        <form action="#" method="post">
+          <ul>
+            <li><span class="textbox">
+              <input type="text" onfocus="if(this.value=='Decision Title') this.value='';" onblur="if(this.value=='') this.value='Decision Title';" value="Decision Title" />
+              </span></li>
+            <li><span class="textarea">
+              <textarea rows="1" cols="1" onfocus="if(this.value=='Decision Summary/Story') this.value='';" onblur="if(this.value=='') this.value='Decision Summary/Story';" >Decision Summary/Story</textarea>
+              </span></li>
+            <li><span class="textbox">
+              <input type="text" onfocus="if(this.value=='Choice #1') this.value='';" onblur="if(this.value=='') this.value='Choice #1';" value="Choice #1" />
+              </span></li>
+            <li><span class="textbox">
+              <input type="text" onfocus="if(this.value=='Choice #2') this.value='';" onblur="if(this.value=='') this.value='Choice #2';" value="Choice #2" />
+              </span></li>
+            <li class="browse clearfix">
+              <div class="frame"><img src="images/john1.jpg" alt="John" /></div>
+              <input type="file" />
+              <p>Choice #1 Photo?</p>
+            </li>
+            <li class="browse clearfix">
+              <div class="frame"></div>
+              <input type="file" />
+              <p>Choice #2 Photo?</p>
+            </li>
+            <li>
+              <select class="selectbox" name="">
+                <option>Decision Category</option>
+                <option>Catagory1</option>
+                <option>Catagory2</option>
+                <option>Catagory3</option>
+              </select>
+            </li>
+            <li>
+              <select class="selectbox" name="">
+                <option>Day To End Decision?</option>
+                <option>Catagory1</option>
+                <option>Catagory2</option>
+                <option>Catagory3</option>
+              </select>
+            </li>
+            <li>
+              <select class="selectbox" name="">
+                <option>Time To End Decision?</option>
+                <option>Catagory1</option>
+                <option>Catagory2</option>
+                <option>Catagory3</option>
+              </select>
+            </li>
+            <li class="submit">
+              <input type="submit" class="submit-btn" value="" />
+              <a href="#" class="prev-btn"></a> <span class="checkbox">
+              <input type="checkbox" />
+              </span>I agree to the terms. </li>
+          </ul>
+        </form>
+      </div>

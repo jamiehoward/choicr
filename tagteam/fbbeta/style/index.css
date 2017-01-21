@@ -1,0 +1,142 @@
+img, div, input { behavior: url("../style/iepngfix.htc"); }
+.clear { clear:both; }
+
+body { margin:0px 0 0 0; padding:0; text-align:center; background:#2777A8; font:normal 12px arial; color:#000; }
+div.feedback { width:76px; height:214px; position:fixed; top:250px; left:0px; background:url(../images/feedback.jpg) no-repeat 0 0; }
+	div.feedback a { width:76px; height:214px; display:block; }
+
+/**************************************
+	HEADER
+***************************************/
+div.header { margin:0px auto; height:47px; width:100%; background-color:#2377a7; }
+	div.header div { width:895px; margin:0px auto; }
+		div.header div img { float:left; margin:15px 0 0 15px; }
+	div.header ul { margin:0px auto; padding:10px 0 0 0; width:280px; text-align:center; font:normal 18px "Myriad Pro", Arial, sans-serif; color:#FFFFFF; }
+		div.header ul li { display:inline; margin:0px 6px; }
+		div.header ul li:first-child { font-weight:bold; }
+		div.header ul a { color:#FFFFFF; text-decoration:none; }
+			div.header ul a:hover { color:#000000;  }
+
+/**************************************
+	NAV
+***************************************/		
+	div.nav { margin:0px auto; height:30px; width:100%; background-color:#1767a4; }
+		div.nav div { width:870px; margin:0px auto; }
+		div.nav div ul { margin:0px 0 0 0x; float:left; padding:7px 0 0 0; width:60%; text-align:left; font:normal 14px Arial, sans-serif; color:#FFFFFF; }
+		div.nav div ul li { display:block; float:left; margin:0px 6px; }
+		div.nav div ul a { color:#FFFFFF; text-decoration:none; }
+			div.nav div ul a:hover { text-decoration:underline;  }
+		div.nav div p { float:right; width:25%; padding:7px 0 0 0; margin:0 0px 0 0; color:#FFFFFF; text-align:right; }
+			div.nav div p a { color:#FFFFFF; text-decoration:none; }
+			div.nav div p a:hover { text-decoration:underline; }
+			
+/**************************************
+	DROP BOX
+***************************************/	
+	div.drop { width:550px; background-color:#bed73d; margin:0px auto; position:relative; text-align:left; padding:10px 30px 15px; }
+		div.drop a { color:#000000; font:normal 21px "Myriad Pro", Calibri, Arial; text-decoration:none; }
+			div.drop h6 { color:#000000; font:normal 21px "Myriad Pro", Calibri, Arial; text-decoration:none; }
+			div.drop a:hover { color:#000000; cursor:pointer; }
+			div.drop a span { color:#000000; } 
+				div.drop a span.big { font-size:28px; font-weight:bold; }
+				div.drop a span.small { font-size:21px; }
+			div.drop a.close { background:url(../images/close.png) no-repeat 0 top; width:36px; height:36px; position:absolute; bottom:3px; right:3px; cursor:pointer; }
+				div.drop a.close:hover { background:url(../images/close.png) no-repeat 0 bottom; }
+			
+/**************************************
+	CONTENT
+***************************************/
+	div.content { width:730px; top:-50px; text-align:left; background:#FFFFFF; margin:65px auto 47px; padding:17px 24px; position:relative; -moz-border-radius:12px; -webkit-border-radius:12px; border-radius:12px; }
+		div.content div.top-left, div.content div.top-right { color:#FFFFFF; font:normal 14px Arial; }
+		div.content div.top-left { position:absolute; top:-23px; left:0px; }	
+		div.content div.top-right { position:absolute; top:-20px; right:0px; font-size:12px; }	
+			div.content div.top-right ul li { display:inline; }
+				div.content div.top-right ul li a { color:#FFFFFF; text-decoration:none; padding:3px; margin-left:3px;  }
+				div.content div.top-right ul li a:hover { background-color:#eee890; color:#000000; }
+					.active { background-color:#eee890; color:#000000 !important; }
+		div.content div.listing { margin-bottom:10px; border-bottom:1px solid #f3fbfd; padding-bottom:10px; }
+			div.content div.listing div.circle { height:38px; width:55px; color:#FFFFFF; text-align:center; float:left; padding-top:17px; font:normal 14px "Myriad Pro", Calibri, Arial; margin-right:15px; -moz-border-radius:40px; -webkit-border-radius:40px; border-radius:40px; position:relative;  }	
+			div.content div.listing div.text { width:600px; }
+			div.content div.listing h1{ font:bold 20px "Myriad Pro", Calibri, Arial; color:#57b7df; }
+				div.content div.listing h1 span{ text-transform:uppercase; font:bold 20px "Myriad Pro", Calibri, Arial; color:#000000; }
+				div.content div.listing h1 a{ font:bold 20px "Myriad Pro", Calibri, Arial; color:#57b7df; }
+				div.content div.listing p { font:normal 14px arial; }
+				div.content div.listing p.bottom { margin:5px 0 0 0; }
+				div.content div.listing p.bottom span { background-color:#ede78f; padding:3px; }
+				div.content div.listing p.bottom span.blue { color:#57b7df; background:none; }
+				div.content div.listing p.bottom span.green { background-color:#bdd63c; padding:3px; margin-left:3px; }
+				div.content div.listing p.bottom span.promote { background-color:#ede78f; border-style:solid; border-width:1px; border-color:#b3ad7d;}
+				div.content div.listing p.bottom a { font-style:italic; color:#e64a50; text-decoration:none;  }
+				div.content div.listing p.bottom a:hover { color:#57b7df; }
+			div.content div.listing div.text { float:left; }
+			div.content div.listing div.bubble { float:right; background:url(../images/bubble.jpg) no-repeat 0 0; width:46px; text-align:center; }
+				div.content div.listing div.bubble span { margin-top:8px; display:block; font-weight:bold; }
+				div.content div.listing div.bubble img { margin-top:20px; }
+			div.content div.image { position: relative; width: 100%; left:60px;}
+				div.content div.image h2 {position: absolute; top: 100px; left: 0; width: 100%;}
+				div.content div.image h2 span {color: white; font: bold 24px/45px Helvetica, Sans-Serif;letter-spacing: -1px;  background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.7);padding: 10px;}
+/**************************************
+	ABOUT
+***************************************/
+	div.content ul.int-nav { float:left; width:150px; margin-right:15px; }
+		div.content ul.int-nav li { border-top:1px solid #f3fbfd; padding-bottom:10px }
+		div.content ul.int-nav li a {  font:normal 18px "Myriad Pro", Arial, sans-serif; color:#57b7df; text-align:center; padding:6px 0; margin:2px 0; display:block; text-decoration:none; }
+			div.content ul.int-nav li a:hover, .int-nav-active { background-color:#bdd63c; color:#000000 !important; }
+	div.content div.right { float:left; width:540px; display:none; }
+		div.content div#about { display:block; }
+		div.content div.right h1 { font:bold 20px "Myriad Pro", Arial, sans-serif; color:#000000; margin-bottom:0px; text-transform:uppercase; }
+		div.content div.right h2 { color:#57b7df; font:normal 20px "Myriad Pro", Arial, sans-serif; border-top:1px solid #f3fbfd; padding-bottom:10px;  }
+		div.content div.right p { line-height:1.3em; margin-bottom:8px; }
+
+/**************************************
+	ASK
+***************************************/	
+	div.ask { padding:15px 60px 0px 60px; }
+		div.ask  h1 { font:bold 28px "Myriad Pro", Calibri, Arial; color:#000000; margin-left:15px; }
+		div.ask  h2 { color:#57b7df; border-bottom:1px solid #deeff7; border-top:1px solid #deeff7;font:normal 20px "Myriad Pro", Calibri, Arial; padding:4px 0; margin:8px 0 0 0; margin-left:15px; }
+	
+	
+	div.ask form table { font:normal 20px "Myriad Pro", Calibri, Arial;  margin:0px auto; }
+		div.ask form table tr td { padding:10px 0; text-align:center; color:#57b7df; }
+			div.ask form table tr div { position:relative; }
+		div.ask form table tr td.submit { text-align:left; padding-left:65px; }
+		div.ask form label { color:#57b7df; margin-right:18px; text-transform:uppercase; display:block; }
+		div.ask form input.text { padding:5px 3px; background-color:#f3f3f5; border:2px solid #d2d2d4; font:bold 30px "Myriad Pro", Calibri, Arial; position:relative; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; }
+		div.ask form input.file { padding:5px 3px; background-color:#f3f3f5; border:2px solid #d2d2d4; font:bold 26px "Myriad Pro", Calibri, Arial; position:relative; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; color:#bed73d; width:360px; }
+		div.ask form textarea { padding:5px 3px; background-color:#f3f3f5; border:2px solid #d2d2d4; font:bold 30px "Myriad Pro", Calibri, Arial; position:relative; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; width:380px; height:220px; }
+		div.ask form select.select { padding:5px 3px; background-color:#f3f3f5; font:bold 30px "Myriad Pro", Calibri, Arial; position:relative; color:#57b7df; border:none; }
+		div.ask form input.text:focus { border-color:#bdd63c;  }
+		div.ask form input.submit { height:39px; width:211px; background:url(../images/signup.jpg) no-repeat 0 0; cursor:pointer; border:0px;  }
+			div.ask form input.submit:hover { background-position:0 bottom; }
+		
+		.LV_valid { position:absolute; height:30px; width:30px; background:url(../images/valid.jpg) no-repeat 0 0; top:12px; right:-36px; }
+		.LV_invalid { position:absolute; height:30px; width:30px; background:url(../images/invalid.jpg) no-repeat 0 0; top:12px; right:-36px;  }
+		
+/**************************************
+	COMMENTS
+***************************************/	
+	div.comments { width:584px; float:left;}
+		div.comments form { width:514px;  margin-left:70px; }
+		div.comments h2 { font:bold 20px "Myriad Pro", Calibri, Arial; color:#57b7df; text-transform:uppercase; }
+		div.comments form textarea { border:2px solid #d2d2d4; background-color:#f3f3f5; width:500px; height:100px; font:normal 16px "Myriad Pro", Calibri, Arial; padding:5px; }
+		div.comments form input.submit { height:27px; margin:5px 0 0 0; border:0px; width:96px; float:right; background:url(../images/submit.jpg) no-repeat 0 0; cursor:pointer; }
+			div.comments form input.submit:hover { background-position:0 bottom; }
+		div.comments div.dogspeak { width:514px; padding-left:70px; margin-top:15px; }
+			div.comments div.dogspeak > div { width:474px; padding:10px 20px 20px; font:normal 13px Arial, Helvetica, sans-serif; position:relative; }
+				div.comments div.dogspeak div.blue { background-color:#aedfe4; }
+				div.comments div.dogspeak div.green { background-color:#bed73d; }
+				div.comments div.dogspeak div a { font-style:italic; color:#e43d44; text-decoration:none; }
+					div.comments div.dogspeak div a:hover { color:#000000; }
+					div.comments div.dogspeak div.blue > div { position:absolute; height:21px; width:18px; background:url(../images/arrow-blue.jpg) no-repeat 0 0px; top:25px; left:-18px; }
+					div.comments div.dogspeak div.green > div { position:absolute; height:21px; width:18px; background:url(../images/arrow-green.jpg) no-repeat 0 0px; top:30px; left:-18px; }
+	div.google { height:600px; width:120px; float:right; background-color:#CCCCCC; margin-top:30px; }
+	
+/**************************************
+	FOOTER
+***************************************/		
+	div.footer { margin:15px auto; top:-50px; width:72%; border-top:1px solid #094d75; padding:10px 0px; width:780px; position:relative; }
+		div.footer ul li { display:inline; color:#FFFFFF; margin:0px 6px; font:normal 13px Arial, sans-serif; }
+			div.footer ul li a { color:#FFFFFF; text-decoration:none; }
+				div.footer ul li a:hover { text-decoration:underline;  }
+			div.footer ul.left { text-align:left; position:absolute; left:0px; top:10px; }
+			div.footer ul.right { text-align:right; position:absolute; right:0px; top:10px; }  

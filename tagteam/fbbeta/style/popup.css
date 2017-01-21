@@ -1,0 +1,33 @@
+img, div, input { behavior: url("../style/iepngfix.htc"); }
+.clear { clear:both; }
+
+body {  }
+
+/**************************************
+	FORM
+***************************************/
+	div.content { padding:15px 30px 0px 30px; }
+		div.content  h1 { font:bold 28px "Myriad Pro", Calibri, Arial; color:#000000; margin-left:15px; }
+		div.content  h2 { color:#57b7df; border-bottom:1px solid #deeff7; border-top:1px solid #deeff7;font:normal 20px "Myriad Pro", Calibri, Arial; padding:4px 0; margin:8px 0 0 0; margin-left:15px; }
+	
+	
+	div.content form table { font:normal 20px "Myriad Pro", Calibri, Arial; }
+		div.content form table tr td { padding:14px 0; text-align:right; }
+			div.content form table tr div { position:relative; }
+		div.content form table tr td.terms { font-size:16px; color:#57b7df; padding:0px 0 !important; }
+			div.content form table tr td.terms a { color:#57b7df; }
+			div.content form table tr td.terms a:hover { color:#000000; }
+		div.content form table tr td.submit { text-align:left; padding-left:65px; }
+		div.content form label { color:#57b7df; margin-right:18px; text-transform:uppercase; display:block; }
+		div.content form input.text { padding:5px 3px; background-color:#f3f3f5; border:2px solid #d2d2d4; font:bold 30px "Myriad Pro", Calibri, Arial; position:relative; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; }
+		div.content form textarea.textarea { padding:5px 3px; background-color:#f3f3f5; border:2px solid #d2d2d4; font:bold 30px "Myriad Pro", Calibri, Arial; position:relative; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; width:380px; height:220px; }
+		div.content form select.select { padding:5px 3px; background-color:#f3f3f5; border:2px solid #d2d2d4; font:bold 30px "Myriad Pro", Calibri, Arial; position:relative; -moz-border-radius:8px; -webkit-border-radius:8px; border-radius:8px; width:390px; color:#57b7df; }
+		div.content form input.text:focus { border-color:#bdd63c;  }
+		div.content form input.submit { height:39px; width:211px; background:url(../images/signup.jpg) no-repeat 0 0; cursor:pointer; border:0px;  }
+		div.content form input.submit:hover { background-position:0 bottom; }
+		
+		div.check { background:url(../images/check-off.jpg) no-repeat 0 0; height:35px; width:35px; float:left; cursor:pointer; }
+		.checked { background:url(../images/check-on.jpg) no-repeat 0 0 !important; }
+		
+		.LV_valid { position:absolute; height:30px; width:30px; background:url(../images/valid.jpg) no-repeat 0 0; top:12px; right:-36px; }
+		.LV_invalid { position:absolute; height:30px; width:30px; background:url(../images/invalid.jpg) no-repeat 0 0; top:12px; right:-36px;  }

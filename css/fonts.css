@@ -1,0 +1,42 @@
+
+@font-face {
+	font-family: 'Gotham-Book';
+	src: url('../fonts/Gotham-Book.eot');
+	src:url('../fonts/Gotham-Book.woff') format('woff'), 
+		url('../fonts/Gotham-Book.ttf') format('truetype'), 
+		url('../fonts/Gotham-Book.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Gotham-Light';
+	src: url('../fonts/Gotham-Light.eot');
+	src: url('../fonts/Gotham-Light.woff') format('woff'), 
+		url('../fonts/Gotham-Light.ttf') format('truetype'), 
+		url('../fonts/Gotham-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+    font-family: 'HelveticaNeueMedium';
+    src: url('../fonts/helvetnm-webfont.eot');
+    src: url('../fonts/helvetnm-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helvetnm-webfont.woff') format('woff'),
+         url('../fonts/helvetnm-webfont.ttf') format('truetype'),
+         url('../fonts/helvetnm-webfont.svg#HelveticaNeueMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'HelveticaNeueHeavy';
+    src: url('../fonts/helvetnh-webfont.eot');
+    src: url('../fonts/helvetnh-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/helvetnh-webfont.woff') format('woff'),
+         url('../fonts/helvetnh-webfont.ttf') format('truetype'),
+         url('../fonts/helvetnh-webfont.svg#HelveticaNeueHeavy') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

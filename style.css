@@ -1,0 +1,76 @@
+html { background:url(http://d2t6wiweulj6zm.cloudfront.net/images/choicr-rp-01.png);}
+body{
+    margin:0; padding:0;
+	font-family: 'PT Serif Caption', serif; color:#809296;
+    background:url(http://d2t6wiweulj6zm.cloudfront.net/images/background.png) no-repeat center top;
+    min-height: 600px;
+    color: #839599;
+}
+    a { color: #839599; }
+
+.wrap { position: relative; z-index: 1; }
+
+.logo a, .logo .hover { width:370px; height:370px; margin: 0 auto; display: block; text-indent: -9999px;
+    background:url(http://d2t6wiweulj6zm.cloudfront.net/images/circle-01.png) center no-repeat scroll transparent; }
+    .logo .hover { float: left; opacity: 0; background-image: url(http://d2t6wiweulj6zm.cloudfront.net/images/circle-02.png); }
+
+.textline{ text-align:center; font-size:26px; font-weight:bold; padding:1% 0 1.5% 0; line-height:1.5em; color:#839599; text-shadow: 0px 2px 3px #151719; }
+	.textline span { color:#a7b4b7; text-shadow: 0px 2px 3px #151719; }
+
+#MyBetaList h2, #MyBetaList p, #MyBetaList iframe, .textline { display: none; }
+.emailform_holder, #MyBetaList-form { width:385px; height:48px; margin:0 auto; background:url(images/bgtext.png) no-repeat center; }
+    .emailform_holder .textbox{ width:290px; float:left; border-radius: 4px; }
+        .emailform_holder .textbox input, #MyBetaList-email {
+            float: left; width:270px; border:0; padding:13px 0 0 10px; background:none; outline:none;
+            color:#32353a; font-family: 'PT Serif Caption', serif; font-style: italic; font-size:16px; }
+        .emailform_holder .btn_holder { float: left; width:88px; text-align:center; padding:5px 0 0 0; }
+    #MyBetaList-form input[type="submit"] { cursor: pointer;
+        float: right; width: 92px; height: 42px; border: none; font-size: 0; color: transparent; margin: 3px 2px 0 0;
+        background: url("images/btn_submit.png") no-repeat; }
+        #MyBetaList-form input[type="submit"]:hover { background-image: url("images/btn_submit_hover.png"); }
+
+.footer { position: relative; z-index: 2; color:#242a2c; text-align: center; font-size:12px; }
+    .social .facebook, .social .twitter, .social .hover {
+        width:100px;
+        height:21px;
+        background: url(http://d2t6wiweulj6zm.cloudfront.net/images/facebook-01.png) no-repeat scroll 0 0 transparent;
+        display: inline-block;
+    }
+    .social .facebook { background: url(http://d2t6wiweulj6zm.cloudfront.net/images/facebook-01.png) top left no-repeat; }
+        .social .facebook .hover, .social .twitter .hover { float: left; opacity: 0; text-indent: -9999px; }
+        .social .facebook .hover { background-image: url(http://d2t6wiweulj6zm.cloudfront.net/images/facebook-02.png); }
+    .social .twitter, .social .twitter .hover { width:90px; height: 20px; background: url(http://d2t6wiweulj6zm.cloudfront.net/images/twitter-01.png) bottom left no-repeat; }
+        .social .twitter .hover { background-image: url(http://d2t6wiweulj6zm.cloudfront.net/images/twitter-02.png); }
+
+#MyBetaList-step2 { text-align: center; font-size: 14px; }
+	#MyBetaList-referrer-link {
+		padding: 12px 15px; background: #0e1214; border-radius: 5px; box-shadow: 0 1px 1px rgba(255,255,255,0.1);
+		font-family: 'PT Serif Caption', serif; color: #4b5c60; font-size: 16px; }
+
+/* Normal Resolution */
+@media only screen and (min-width: 701px) {
+    /* Sticky Footer */
+    html, body { height: 100%; }
+    .wrap { min-height: 100%; }
+    .content { overflow:auto; padding-bottom: 100px; }
+    .footer { position: relative; margin-top: -80px; height: 50px; clear:both; }
+}
+
+/* Small Resolution */
+@media only screen and (max-width: 700px) {
+    .cir_image { width: 300px; height: 300px; background-size: contain; -moz-background-size: contain; }
+    .textline { font-size: 14px; }
+    .content { padding-bottom: 150px; }
+}
+
+
+/* Large Resolution */
+@media only screen and ( min-width: 701px ) and ( min-height: 651px ) {
+    .content { position: absolute; z-index: 2; top: 50%; margin-top: -300px; width: 100%; }
+    #sb-wrapper{ margin-top:-130px !important; }
+}
+
+
+@media only screen and ( max-height: 650px ) {
+    #sb-wrapper{ top: 10px !important; margin-top:0 !important; }
+}

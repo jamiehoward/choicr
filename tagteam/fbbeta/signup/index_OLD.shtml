@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>DOGVOTICUS!</title>
+    <link type="text/css" rel="stylesheet" href="../style/reset.css" />
+    <link type="text/css" rel="stylesheet" href="../style/popup.css" />
+</head>
+<body>
+	<div class="content">
+    	<form>
+        	<table>
+            	<tr>
+                	<td><label for="User Name">User Name</label></td>
+                   	<td><div><input type="text" class="text" name="firstname" id="firstname" /></div></td>
+              	</tr>
+                <tr>
+                	<td><label for="Password">Password</label></td>
+                   	<td><div><input type="text" class="text" name="password" id="password" /></div></td>
+              	</tr>
+                <tr>
+                	<td><label for="email">E-Mail</label></td>
+                   	<td><div><input type="text" class="text" name="email" id="email" /></div></td>
+              	</tr>
+                <tr>
+                	<td><label for="test">What is <b>14</b> + <b>5</b></label></td>
+                   	<td><div><input type="text" class="text" name="test" id="test" /></div></td>
+              	</tr>
+                <tr>
+                	<td>&nbsp;</td>
+                   	<td class="terms"><div class="check"><input type="hidden" value="no" /></div><p style="float:left; margin:0px 0 0 16px;">I understand and agree with the<br />DOGVOTICUS <a href="#">Terms of Service</a>.</p></td>
+              	</tr>
+                <tr>
+                	<td>&nbsp;</td>
+                   	<td class="submit"><input type="submit" class="submit" value="" /></td>
+              	</tr>
+            </table>
+        </form>
+    </div>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.base.js"></script>
+    <script type="text/javascript" src="../js/livevalidation.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){ check(); });
+		var firstname = new LiveValidation('firstname');
+		firstname.add(Validate.Presence);
+		var password = new LiveValidation('password');
+		password.add(Validate.Presence);
+		var email = new LiveValidation('email');
+		email.add(Validate.Presence);
+		email.add( Validate.Email );
+		var test = new LiveValidation('test');
+		test.add(Validate.Presence);
+		test.add( Validate.Numericality, { minimum: 19, maximum: 19, onlyInteger: true } );
+	</script> 
+</body>
+</html>

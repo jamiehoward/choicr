@@ -1,0 +1,134 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>CHOICR | Ask, Decide, Repeat!</title>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif+Caption:400,400italic' rel='stylesheet' type='text/css'>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="shadowbox.js"></script>
+<script src="watcher.jquery.js"></script>
+<link href="shadowbox.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="wrap">
+    <div class="content">
+
+    	<div class="logo">
+			<a href="#">
+			<span class="hover">Choicr</span>
+		</a>
+
+        </div>    
+        
+        <div class="textline"><span>Choicr revolutionizes the way the world sees</span><br>decision making. <em>Sign-up below for access:</em></div>
+<!--
+        <div class="email_form">
+            <div class="emailform_holder">
+                <div class="textbox"><input name="" type="text" value="name@emailaddress.com"></div>
+                <div class="btn_holder"><a href="http://choicr.com/LANDING/#"><img src="images/btn_submit.jpg" alt="" border="0"></a></div> 
+            </div>
+        </div>
+-->
+        <script src="http://my.betali.st/widget/4qvp5few.js" id="MyBetaList"></script> 
+
+    </div>
+</div>
+             
+<div class="footer">
+    <p class="social">
+        <a class="facebook" href="https://www.facebook.com/pages/Choicr/170069306364967"><span class="hover">facebook</span></a>
+        <a class="twitter" href="http://twitter.com/choicr"><span class="hover">twitter</span></a>
+    </p>
+    <p>Copyright © 2011 Invoticus Inc.</p>
+</div>
+
+<script type="text/javascript">
+    Shadowbox.setup('.logo a', {
+        overlayColor: "#181a1b",
+        overlayOpacity: 0.7,
+        height:     360,
+        width:      640,
+        flashVars:  {
+            clip_id:    "1893986",
+            autoplay:   "1"
+        }
+    });
+    Shadowbox.init();
+
+    $(function() {
+        var defaultEmail = "email@example.com";
+
+        $(".social a, .logo a").hover(
+            function() {
+                $(this).find(".hover").stop(true).animate({ opacity: 1 }, '100');
+            },
+            function () {
+                $(this).find(".hover").animate({ opacity: 0 }, '300');
+            }
+        );
+
+    });
+
+    $(window).load(function() {
+        var step1 = $("#MyBetaList-step1");
+        var step2 = $("#MyBetaList-step2");
+
+        function swapText() {
+            $(".textline").fadeOut(100);
+            step2.children(":not(#MyBetaList-referrer-link-wrap)").fadeOut(100, function() {
+                step2.children(":not(#MyBetaList-referrer-link-wrap)").remove();
+                $(".textline").html(
+                    "<span>Thanks! For early beta access and the chance to</span>"+
+                    "<br>"+
+                    "win a $50 gift, share your personal link below:"
+                );
+                $("#MyBetaList-referrer-link-wrap, .textline").fadeIn(500);
+            });
+        }
+
+        if( step1.css("display") == "block") {
+
+            step1.fadeIn(500);
+            $(".textline").fadeIn(500);
+            $("#MyBetaList-email")
+                .live("focusin", function() {
+                    $("#MyBetaList-email").css("color","#4c5052");
+                })
+                .live("focusout", function() {
+                    if( $("#MyBetaList-email").val() == "" ) {
+                        $("#MyBetaList-email").css("color","#32353a");
+                    }
+                }
+            );
+
+
+            $("#MyBetaList-referrer-link").watch('innerHTML', function() {
+                swapText();
+            });
+
+        } else if(  step2.css("display") == "block" ) {
+            swapText();
+        }
+    });
+
+</script>
+<!--For Google Analytics tracking-->
+<script type="text/javascript">
+
+var gaq = gaq || [];
+gaq.push(['setAccount', 'UA-130873-18']);
+gaq.push(['trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</body>
+</html>

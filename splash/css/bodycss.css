@@ -1,0 +1,39 @@
+/* Primary Styles for Home Page
+*/
+
+html { height: 100%; }
+body { height: 100%; background:url(../images/content-bg.gif) repeat left top; font-family:Arial, Helvetica, sans-serif;}
+body.home #footer, .push { height: 60px; }
+body.home{ font-family: 'Gotham-Book'; background:#f7f7f7 url(../images/body-bg.jpg) left top repeat-x; }
+
+/*---- Container ----*/
+div#container { height:100%; }
+div#container div#page{  min-height: 100%; height: auto !important;  margin: 0 auto -60px; background:url(../images/light.jpg) top center no-repeat; }
+
+/*---- Wrapper ----*/
+div.wrapper{ width:965px; margin:0px auto;}
+
+/*---- Header ----*/
+body.home div#header{ background:none; padding:0px 0px 124px 0px; width:100%; float:none; }
+
+/*---- Content ----*/
+body.home div#content { padding:0px 0px 74px 0px; width:100%; float:none; }
+body.home div#content h2{ text-align:center; color:#181b1d; font-size:20px; margin-bottom:59px; font-weight:normal; line-height:24px;}
+
+/*---- Logo ----*/
+body.home div.logo{ margin:0px auto; width:360px; margin-bottom:4px; text-align:center; padding-left:37px; height:auto; float:none; position:relative;}
+body.home div.logo a{ background:url(../images/logo.png) no-repeat left top; width:356px; height:0px; padding-top:357px; position:relative; overflow:hidden; display:block; margin-bottom:50px; display:inline-block; z-index:1;}
+body.home div.logo span{background:url(../images/logo-hover.png) no-repeat left top; width:356px; height:0px; padding-top:357px; position:absolute; overflow:hidden; display:block; margin-bottom:50px; display:inline-block; opacity:0; z-index:100; left:38px; top:1px; cursor:pointer; }
+
+body.home div.logo p.tagline{ color:#4392a0; font-size:20px; line-height:22px; text-align:left; font-weight:normal;}
+
+/*---- Main-Navigation ----*/
+body.home div#menu{ background:url(../images/navigation-bg.png) repeat-x left top; float:none; margin:0px;}
+body.home div#menu ul{ float:left;}
+body.home div#menu ul li{ float:left; }
+body.home div#menu ul li a{ color:#fff; font-size:20px; padding:0px 20px;  display:block; float:left; height:48px; line-height:48px; font-family: 'Gotham-Book';  }
+
+/*---- Footer ----*/
+body.home div#footer{ text-align:center; position:relative; background:none;  bottom:auto; left:auto; }
+body.home div#footer p{ color:#181b1d; font-size:12px ; line-height:12px; position:relative;}
+body.home div#footer p a{color:#181b1d;}

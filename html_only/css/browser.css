@@ -1,0 +1,37 @@
+/**********************************************************************************************
+PURPOSE
+This CSS file provide a clever way to add browser and OS specific css styles.
+http://rafael.adm.br/css_browser_selector
+***********************************************************************************************/
+
+/*------------------------------------------
+// IE - All Versions - Windows
+//------------------------------------------*/
+
+/* Clearfix Method for containing floats in IE */
+.ie .clearfix { display: inline-block; }  /* ... especialy for IE7 */
+.ie .clearfix { display: block; }          /* ... for IE5,IE6,IE7 */
+* html.ie .clearfix { height: 1%; }       /* ... for IE5 + IE6/Win */
+
+/* Adjustment of .floatbox class for IE */
+.ie .floatbox { width:100%; }
+
+/*Use to make CSS 3 Rounded Corners , Text Shadows and Box Shadows for IE */
+.ie .css3 { behavior: url("js/PIE.htc"); }
+
+/*------------------------------------------
+// IE - IE6.0 - Windows 
+//------------------------------------------*/
+
+/* Adds near-native PNG support with alpha opacity in IE6 */
+/* ie6 img { behavior: url("js/iepngfix.htc");  } */
+
+/* Adds ability to user :hover selector on any tag in IE6 */
+.ie6 body { behavior: url("js/csshover.htc"); }
+.ie7 div.comments div.comment-form input.checkbox { margin-top:-5px; position:relative;}
+.ie ul.list3 li { height:1%; }
+.webkit div#left-pannel{ width:65.04%;  }
+.ie7 div.sign-up-form input.textbox{ position:relative; margin-left:-110px;}
+.ie9 div#MyBetaList-step1 {width: 620px;}
+.ie8 body.home div.logo span{ visibility:hidden; }
+.webkit body.home div#menu ul li.team div.inner { left: -192px; }
